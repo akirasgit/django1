@@ -25,7 +25,7 @@ SECRET_KEY = 'sb4ak$0-03o8g+w&luh=^s)jttwyc8c4u&e096r5)e^5tk53x8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ec2-52-221-232-96.ap-southeast-1.compute.amazonaws.com']
 
 
 # Application definition
@@ -75,8 +75,15 @@ WSGI_APPLICATION = 'django1.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'testdb',
+        'USER': 'sqlMaster',
+        'PASSWORD': 'admin8513*()',
+        'PORT': '3306',
+        'HOST': 'db-django1.cwhzma4rsmhe.ap-southeast-1.rds.amazonaws.com',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
     }
 }
 

@@ -3,6 +3,8 @@
 import os
 import sys
 
+print(sys.path)
+
 
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django1.settings')
@@ -19,3 +21,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
