@@ -76,11 +76,11 @@ WSGI_APPLICATION = 'django1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'testdb',
+        'NAME': 'dbname',
         'USER': 'user',
         'PASSWORD': 'test123',
         'PORT': '3306',
-        'HOST': 'db-django1.cwhzma4rsmhe.ap-southeast-1.rds.amazonaws.com',
+        'HOST': 'dburl',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         },
