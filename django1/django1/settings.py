@@ -40,7 +40,7 @@ SECRET_KEY = get_secret("SECRET-KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', get_secret["HOST"]]
+ALLOWED_HOSTS = ['localhost', get_secret("HOST")]
 
 
 # Application definition
@@ -91,11 +91,11 @@ WSGI_APPLICATION = 'django1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': get_secret["DB-NAME"],
-        'USER': get_secret["DB-USER"],
-        'PASSWORD': get_secret["DB-PW"],
+        'NAME': get_secret("DB-NAME"),
+        'USER': get_secret("DB-USER"),
+        'PASSWORD': get_secret("DB-PW"),
         'PORT': '3306',
-        'HOST': get_secret["DB-HOST"],
+        'HOST': get_secret("DB-HOST"),
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         },
